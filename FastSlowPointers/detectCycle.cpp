@@ -27,7 +27,9 @@ public:
                 break;
         }
 
-        //if fast pointer reached the end, there is no cycle
+        //now check if slow and fast pointers met
+        //if they did, reset slow to head and move both pointers one step at a time
+        //the point where they meet again is the start of the cycle
         if(slow == fast){
             slow = head;
             while(slow != fast){
@@ -36,7 +38,7 @@ public:
             }
             return slow;
         }
-        
+
         //if we exit the loop without finding a cycle, return NULL
         return NULL;
     }
