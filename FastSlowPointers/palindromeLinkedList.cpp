@@ -11,6 +11,7 @@
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
+        //return true if the list is empty or has only one element
         if (head == NULL || head->next == NULL) {
             return true;
         }
