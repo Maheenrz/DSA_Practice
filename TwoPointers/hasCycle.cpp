@@ -16,9 +16,11 @@ public:
         ListNode* slow=head;
         ListNode* fast=head;
 
+        // floyd's cycle detection
         while(fast && fast->next){
             slow=slow->next;
             fast=fast->next->next;
+            // if slow and fast meet , there is a cycle
             if(slow==fast){
                 return true;
             }
